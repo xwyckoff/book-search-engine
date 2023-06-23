@@ -10,6 +10,15 @@ type Book {
     title: String!
 },
 
+input BookInput {
+    authors: [String],
+    description: String!,
+    bookId: String!,
+    image: String,
+    link: String,
+    title: String!
+},
+
 type User {
     _id: ID!,
     username: String!,
@@ -30,8 +39,8 @@ type Query {
 type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth,
     login(username: String!, password: String!): Auth,
-    saveBook(user: User!, book: Book!): User,
-    deleteBook(user: User!, bookId: String!): User
+    saveBook(userId: ID!, book: BookInput!): User,
+    deleteBook(userId: ID!, bookId: String!): User
 }`
 
 module.exports = typeDefs;
