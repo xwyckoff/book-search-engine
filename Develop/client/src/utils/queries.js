@@ -5,7 +5,6 @@ export const FIND_SINGLE_USER = gql`
         user(userId: $userId) {
             _id
             username
-            email
             savedBooks
         }
     }
