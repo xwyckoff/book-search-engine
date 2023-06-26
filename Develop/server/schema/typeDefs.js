@@ -38,8 +38,8 @@ type Query {
 type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth,
     login(username: String!, password: String!): Auth,
-    saveBook(userId: ID!, book: BookInput!): User,
-    deleteBook(userId: ID!, bookId: String!): User
+    saveBook(book: BookInput!): User,
+    deleteBook(bookId: String!): User
 }`
 
 module.exports = typeDefs;
