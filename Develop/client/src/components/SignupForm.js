@@ -31,7 +31,7 @@ const SignupForm = () => {
 
     addUser({variables: userFormData});
 
-      console.log(user);
+      console.log(data?.user);
       Auth.login(data?.token);
 
     setUserFormData({
